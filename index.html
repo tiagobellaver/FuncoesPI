@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Funções Processamento de Imagens</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row main-title">
+            <h1>Funções</h1>
+        </div>
+
+        <div class="row">
+            <div class="normalizador">
+                <h2>Normalizador RGB</h2>
+                <div class="normalizador-container">
+                    <div>
+                        <p>R</p><input />
+                    </div>
+                    <div>
+                        <p>G</p><input />
+                    </div>
+                    <div>
+                        <p>B</p><input />
+                    </div>
+                </div>
+                <div class="normalizador-button">
+                    <Button>Converter</Button>
+                </div>
+                <div class="normalizador-result">
+                    <p class="normalizador-resultado">Resultado</p>
+                    <p>Valor aqui</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="normalizador rgb-to-hsv">
+                <h2>RGB para HSV</h2>
+                <div class="normalizador-container">
+                    <div>
+                        <p>R</p><input />
+                    </div>
+                    <div>
+                        <p>G</p><input />
+                    </div>
+                    <div>
+                        <p>B</p><input />
+                    </div>
+                </div>
+                <div class="normalizador-button">
+                    <Button>Converter</Button>
+                </div>
+                <div class="normalizador-result">
+                    <p class="normalizador-resultado">Resultado</p>
+                    <p>Valor aqui</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="normalizador hsv-to-rgb">
+                <h2>HSV para RGB</h2>
+                <div class="normalizador-container">
+                    <div>
+                        <p>H</p><input />
+                    </div>
+                    <div>
+                        <p>S</p><input />
+                    </div>
+                    <div>
+                        <p>V</p><input />
+                    </div>
+                </div>
+                <div class="normalizador-button">
+                    <Button>Converter</Button>
+                </div>
+                <div class="normalizador-result">
+                    <p class="normalizador-resultado">Resultado</p>
+                    <p>Valor aqui</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" normalizador rgb-to-cmyk">
+                <h2>RGB para CMYK</h2>
+                <div class="normalizador-container">
+                    <div>
+                        <p>R</p><input />
+                    </div>
+                    <div>
+                        <p>G</p><input />
+                    </div>
+                    <div>
+                        <p>B</p><input />
+                    </div>
+                </div>
+                <div class="normalizador-button">
+                    <Button>Converter</Button>
+                </div>
+                <div class="normalizador-result">
+                    <p class="normalizador-resultado">Resultado</p>
+                    <p>Valor aqui</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="normalizador cmyk-to-rgb">
+                <h2>CMYK para RGB</h2>
+                <div class="normalizador-container">
+                    <div>
+                        <p>C</p><input />
+                    </div>
+                    <div>
+                        <p>M</p><input />
+                    </div>
+                    <div>
+                        <p>Y</p><input />
+                    </div>
+                    <div>
+                        <p>K</p><input />
+                    </div>
+                </div>
+                <div class="normalizador-button">
+                    <Button>Converter</Button>
+                </div>
+                <div class="normalizador-result">
+                    <p class="normalizador-resultado">Resultado</p>
+                    <p>Valor aqui</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="normalizador rgb-to-grey">
+                <h2>RGB para Escala de Cinza</h2>
+                <div class="normalizador-container">
+                    <div>
+                        <p>R</p><input />
+                    </div>
+                    <div>
+                        <p>G</p><input />
+                    </div>
+                    <div>
+                        <p>B</p><input />
+                    </div>
+                </div>
+                <div class="normalizador-button">
+                    <Button>Converter</Button>
+                </div>
+                <div class="normalizador-result">
+                    <p class="normalizador-resultado">Resultado</p>
+                    <p>Valor aqui</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
