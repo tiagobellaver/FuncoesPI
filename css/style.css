@@ -1,0 +1,70 @@
+.container-fluid {
+    background-color: #D3D3D3;
+    padding-bottom: 50px;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.normalizador{
+    margin-top: 20px;
+}
+
+.normalizador-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.normalizador-container div {
+    margin-right: 15px;
+}
+
+.normalizador h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.normalizador-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.normalizador-button button {
+    background-color: #D3D3D3;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.normalizador-container input {
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+}
+
+.normalizador-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.normalizador-resultado {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
