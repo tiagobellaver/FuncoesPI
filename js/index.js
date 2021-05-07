@@ -147,7 +147,7 @@ function hsvRgb() {
             g = p;
             b = q;
     }
-    
+
     alert("O resultado da conversão HSV para RGB é: R: " + Math.round(r * 255) + " G: " + Math.round(g * 255) + " B: " + Math.round(b * 255));
 
 }
@@ -155,25 +155,45 @@ function hsvRgb() {
 //RGB para CMYK
 function rgbCmyk() {
 
-    let valueR = parseInt(document.querySelector('#valueR3').value);
-    let valueG = parseInt(document.querySelector('#valueG3').value);
-    let valueB = parseInt(document.querySelector('#valueB3').value);
+    let r = parseInt(document.querySelector('#valueR3').value);
+    let g = parseInt(document.querySelector('#valueG3').value);
+    let b = parseInt(document.querySelector('#valueB3').value);
 
-    let r = valueR / 255;
-    let g = valueG / 255;
-    let b = valueB / 255;
+    var computedC = 0;
+    var computedM = 0;
+    var computedY = 0;
+    var computedK = 0;
 
-    let k = 1 - Math.max(r, g, b);
+    if (r == null || g == null || b == null ||
+        isNaN(r) || isNaN(g) || isNaN(b)) {
+        alert('Please enter numeric RGB values!');
+        return;
+    }
+    if (r < 0 || g < 0 || b < 0 || r > 255 || g > 255 || b > 255) {
+        alert('RGB values must be in the range 0 to 255.');
+        return;
+    }
 
-    let c = (1 - r - k) / (1 - k);
+    // BLACK
+    if (r == 0 && g == 0 && b == 0) {
+        computedK = 1;
+        return [0, 0, 0, 1];
+    }
 
-    let m = (1 - g - k) / (1 - k);
+    computedC = 1 - (r / 255);
+    computedM = 1 - (g / 255);
+    computedY = 1 - (b / 255);
 
-    let y = (1 - b - k) / (1 - k);
+    var minCMY = Math.min(computedC,
+        Math.min(computedM, computedY));
+    computedC = (computedC - minCMY) / (1 - minCMY);
+    computedM = (computedM - minCMY) / (1 - minCMY);
+    computedY = (computedY - minCMY) / (1 - minCMY);
+    computedK = minCMY;
 
-    console.log(k);
 
-    alert("O resultado da conversão RGB para CMYK é: C: " + Math.round(c) + " M: " + Math.round(m) + " Y: " + Math.round(y) + " k: " + Math.round(k));
+
+    alert("O resultado da conversão RGB para CMYK é: C: " + Math.round(computedC) + "% M: " + Math.round(computedM) + "% Y: " + Math.round(computedY) + "% k: " + Math.round(computedK) + "%");
 
 }
 
